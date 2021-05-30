@@ -1,0 +1,4 @@
+model:
+  num_steps: 300
+  style_weight: 1000000
+  content_weight: 1
