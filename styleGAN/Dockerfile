@@ -1,4 +1,4 @@
-FROM ubuntu:18.04
+FROM ubuntu:20.04
 
 RUN apt update && apt upgrade -y && apt install -y \
     sudo \
@@ -15,4 +15,4 @@ COPY requirements.txt /workdir
 
 RUN pip3 install -r requirements.txt
 
-CMD ["python3 main.py"]
+CMD ["/bin/bash"]
