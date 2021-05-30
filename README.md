@@ -28,4 +28,8 @@
 - data  
   サンプルデータ  
 - results  
-  サンプル結果  
+  サンプル結果
+  
+### Docker
+- docker-compose up --build -d
+- docker-compose exec app python3 main.py
