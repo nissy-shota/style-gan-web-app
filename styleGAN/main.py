@@ -2,6 +2,10 @@ from __future__ import print_function
 import argparse
 import torch
 import matplotlib.pyplot as plt
+from PIL import Image
+import numpy as np
+import os
+import torchvision.transforms as transforms
 
 import utils
 import styleGAN
@@ -18,9 +22,8 @@ def main():
 
     config = utils.load_yaml(args.yaml_file)
 
-
-    style_img_path = "./data/images/neural-style/picasso.jpg"
-    content_img_path = "./data/images/neural-style/dancing.jpg"
+    style_img_path = config['dataset']['style_img']
+    content_img_path = config['dataset']['content_img']
 
     ImageDataSet = dataset.ImageDataSet(device)
 
@@ -48,6 +51,12 @@ def main():
     plt.ioff()
     plt.show()
 
+    save_dir = config['save_config']['save_dir']
+    quality = config['save_config']['quality']
+    file_name = config['save_config']['file_name']
+    save_file_name = os.path.join(save_dir, file_name)
+
+    utils.imsave(output, save_file_name)
 
 
 if __name__ == "__main__":
