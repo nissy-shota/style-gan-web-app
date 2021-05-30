@@ -1,0 +1,11 @@
+dataset:
+  style_img: ./data/images/picasso.jpg
+  content_img: ./data/images/dancing.jpg
+model:
+  num_steps: 300
+  style_weight: 1000000
+  content_weight: 1
+save_config:
+  save_dir: ./results
+  file_name: style_GAN_result.jpg
+  quality: 100
