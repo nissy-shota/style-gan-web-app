@@ -30,6 +30,6 @@
 - results  
   サンプル結果
   
-### Docker
+### Docker for cpu
 - docker-compose up --build -d
 - docker-compose exec app python3 main.py
